@@ -1,0 +1,29 @@
+<resources>
+    <string name="app_name">memo</string>
+    <string name="title_home">memo</string>
+    <string name="title_dashboard">Dashboard</string>
+    <string name="title_notifications">Notifications</string>
+    <string name="background">background</string>
+    <string name="memo">memo</string>
+    <string name="logo">logo</string>
+    <string name="sign_in">Sign In</string>
+    <string name="login">login</string>
+    <string name="welcome_back">Welcome Back</string>
+    <string name="email">Email</string>
+    <string name="password">Password</string>
+    <string name="already_have_an_account">Already have an account ?</string>
+    <string name="email_gmail_com">email@gmail.com</string>
+    <string name="log_in">Log IN</string>
+    <string name="user_name">User Name</string>
+    <string name="username">username</string>
+    <string name="what_are_you_working_on">What are You Working on ?</string>
+    <string name="ui_and_ux_designer">UI and UX Designer</string>
+    <string name="backend_developer">Backend Developer</string>
+    <string name="frontend_developer">Frontend Developer</string>
+    <string name="what_are_you_working_on_">What are you working on ?</string>
+    <string name="learning_vue_js_with_me">learning vue js with me</string>
+    <string name="recomended_article">Recomended Article</string>
+    <string name="imagearticel">imageArticel</string>
+    <string name="frontend_article">Frontend Article</string>
+    <string name="java_scrip">Java Scrip</string>
+</resources>
