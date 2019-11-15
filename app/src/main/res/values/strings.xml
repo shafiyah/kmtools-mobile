@@ -26,4 +26,5 @@
     <string name="imagearticel">imageArticel</string>
     <string name="frontend_article">Frontend Article</string>
     <string name="java_scrip">Java Scrip</string>
+    <string name="search">Search</string>
 </resources>

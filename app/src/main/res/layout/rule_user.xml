@@ -5,33 +5,18 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical">
-
-    <LinearLayout
-        android:id="@+id/linearLayout"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:orientation="vertical">
-
-        <ImageView
-            android:id="@+id/backgroud_blue"
-            android:layout_width="match_parent"
-            android:layout_height="120dp"
-            android:layout_weight="1"
-            android:background="#2872C9"
-            android:contentDescription="@string/background">
-        </ImageView>
+    android:orientation="vertical"
+    android:background="#2872C9  ">
 
         <ImageView
             android:id="@+id/backgroud_white"
-            android:layout_width="wrap_content"
-            android:layout_height="400dp"
+            android:layout_width="match_parent"
+            android:layout_height="500dp"
             android:layout_weight="1"
             android:background="#ffffff"
-            android:contentDescription="@string/background">
+            android:contentDescription="@string/background"
+            app:layout_constraintBottom_toBottomOf="parent">
         </ImageView>
-
-    </LinearLayout>
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
@@ -55,39 +40,38 @@
             app:layout_constraintTop_toTopOf="parent" />
 
 
-        <ImageView
+        <Button
             android:id="@+id/imageViewBackend"
-            android:layout_width="150dp"
-            android:layout_height="130dp"
-            android:layout_marginLeft="40dp"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_marginLeft="50dp"
             android:layout_marginTop="80dp"
             android:layout_weight="1"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/textViewJobdesk"
-            app:srcCompat="@drawable/backend_logo" />
+            android:background="@drawable/backend_logo" />
 
-        <ImageView
+        <Button
             android:id="@+id/imageViewUI"
-            android:layout_width="150dp"
-            android:layout_height="130dp"
-            android:layout_marginLeft="40dp"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_marginLeft="50dp"
             android:layout_marginTop="30dp"
             android:layout_weight="1"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/textViewFrontend"
-            app:srcCompat="@drawable/ui_ux_logo" />
+            android:background="@drawable/ui_ux_logo" />
 
-        <ImageView
+        <Button
             android:id="@+id/imageViewFrontend"
-            android:layout_width="wrap_content"
-            android:layout_height="130dp"
-            android:layout_marginLeft="30dp"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
             android:layout_marginTop="80dp"
             app:layout_constraintBottom_toTopOf="@+id/textViewBackend"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toEndOf="@+id/imageViewBackend"
             app:layout_constraintTop_toBottomOf="@+id/textViewJobdesk"
-            app:srcCompat="@drawable/frontend_logo" />
+            android:background="@drawable/frontend_logo" />
 
         <TextView
             android:id="@+id/textViewBackend"
@@ -96,7 +80,7 @@
             android:layout_marginLeft="5dp"
             android:layout_marginTop="5dp"
             android:text="@string/frontend_developer"
-            android:textSize="20dp"
+            android:textSize="16dp"
             android:textStyle="bold"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toEndOf="@+id/textViewFrontend"
@@ -106,10 +90,10 @@
             android:id="@+id/textViewFrontend"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginLeft="40dp"
+            android:layout_marginLeft="50dp"
             android:layout_marginTop="10dp"
             android:text="@string/backend_developer"
-            android:textSize="20dp"
+            android:textSize="16dp"
             android:textStyle="bold"
             app:layout_constraintEnd_toEndOf="@id/imageViewBackend"
             app:layout_constraintStart_toStartOf="parent"
@@ -122,13 +106,11 @@
             android:layout_marginTop="10dp"
             android:layout_marginStart="40dp"
             android:text="@string/ui_and_ux_designer"
-            android:textSize="20dp"
+            android:textSize="16dp"
             android:textStyle="bold"
             app:layout_constraintEnd_toEndOf="@id/imageViewBackend"
             app:layout_constraintHorizontal_bias="0.48"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/imageViewUI" />
-
-
     </androidx.constraintlayout.widget.ConstraintLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>
