@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/constraintLayout"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:orientation="vertical"
+        app:layout_constraintTop_toTopOf="parent"
+        android:background="#2872C9">
+        <ImageView
+            android:id="@+id/imageViewBack"
+            android:layout_width="32dp"
+            android:layout_height="32dp"
+            android:layout_margin="10dp"
+            android:src="@drawable/ic_back_24dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+        </ImageView>
+        <TextView
+            android:id="@+id/txtsettings"
+            android:layout_width="379dp"
+            android:layout_height="32dp"
+            android:layout_margin="10dp"
+            android:text="Settings"
+            android:textAlignment="center"
+            android:textColor="#FFFFFF"
+            android:textSize="24sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/imageViewBack"
+            app:layout_constraintTop_toTopOf="parent">
+        </TextView>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <Button
+        android:id="@+id/button_setting_sprofile"
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        android:layout_marginLeft="50dp"
+        android:layout_marginTop="250dp"
+        android:layout_marginRight="50dp"
+        android:background="@drawable/rounded_button_blue"
+        android:paddingTop="10dp"
+        android:textAlignment="center"
+        android:textSize="20sp"
+        android:text="Setting Profile"
+        android:textColor="#ffffff"
+        app:layout_constraintTop_toBottomOf="@+id/constraintLayout">
+    </Button>
+
+    <Button
+        android:id="@+id/logout"
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        android:layout_marginLeft="50dp"
+        android:layout_marginTop="70dp"
+        android:layout_marginRight="50dp"
+        android:background="@drawable/rounded_button_blue"
+        android:paddingTop="10dp"
+        android:textAlignment="center"
+        android:textSize="20sp"
+        android:text="Logout"
+        android:textColor="#ffffff"
+        app:layout_constraintTop_toBottomOf="@+id/button_setting_sprofile">
+    </Button>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
