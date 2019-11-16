@@ -1,11 +1,11 @@
-package com.example.memo.Api;
+package com.example.memo.data.Api;
 
 import retrofit2.Retrofit;
 import retrofit2.converter.gson.GsonConverterFactory;
 
 
 public class ApiRetrofit {
-    public static final String BASE_URL ="https://www.google.com/";
+    public static final String BASE_URL ="https://test-kmtoolsv2.herokuapp.com/api/auth/login";
     private  static  Retrofit retrofit;
 
     public static Retrofit getInstance(){
