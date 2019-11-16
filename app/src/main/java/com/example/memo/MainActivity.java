@@ -1,6 +1,7 @@
 package com.example.memo;
 
 import android.os.Bundle;
+import android.widget.Button;
 
 import com.example.memo.data.Api.ApiRetrofit;
 import com.example.memo.data.Api.IApiEndPoint;
@@ -16,6 +17,7 @@ import androidx.navigation.ui.NavigationUI;
 import retrofit2.Call;
 import retrofit2.Callback;
 import retrofit2.Response;
+import retrofit2.http.HEAD;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -25,6 +27,7 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
 
         IApiEndPoint apiEndPoint = ApiRetrofit.getInstance().create(IApiEndPoint.class);
         apiEndPoint.login("bitter@nut.co.nk", "12345").enqueue(new Callback<ResponseLogin>() {
@@ -38,7 +41,6 @@ public class MainActivity extends AppCompatActivity {
 
             }
         });
-
         BottomNavigationView navView = findViewById(R.id.nav_view);
 
        // Passing each menu ID as a set of Ids because each
