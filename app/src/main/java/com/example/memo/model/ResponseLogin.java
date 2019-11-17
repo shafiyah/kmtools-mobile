@@ -14,4 +14,5 @@ public class ResponseLogin {
     public void setToken(String token) {
         this.token = token;
     }
+
 }

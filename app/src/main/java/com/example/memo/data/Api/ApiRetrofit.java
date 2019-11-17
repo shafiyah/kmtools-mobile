@@ -5,7 +5,7 @@ import retrofit2.converter.gson.GsonConverterFactory;
 
 
 public class ApiRetrofit {
-    public static final String BASE_URL ="https://test-kmtoolsv2.herokuapp.com/api/auth/login";
+    public static final String BASE_URL ="https://test-kmtoolsv2.herokuapp.com/";
     private  static  Retrofit retrofit;
 
     public static Retrofit getInstance(){

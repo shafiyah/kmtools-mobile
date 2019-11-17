@@ -2,10 +2,9 @@ package com.example.memo.model;
 
 import com.google.gson.annotations.SerializedName;
 
-public class ListAllArticle <T>{
-
+public class ResponseUpdateUser<T> {
     @SerializedName("data")
-    private  T data;
+         private T data;
 
     public T getData() {
         return data;

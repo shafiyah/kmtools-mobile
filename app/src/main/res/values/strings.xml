@@ -27,4 +27,6 @@
     <string name="frontend_article">Frontend Article</string>
     <string name="java_scrip">Java Scrip</string>
     <string name="search">Search</string>
+    <string name="name">name</string>
+    <string name="nameUser">Name</string>
 </resources>
