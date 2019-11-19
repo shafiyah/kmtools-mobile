@@ -2,11 +2,11 @@
     <string name="app_name">memo</string>
     <string name="title_home">memo</string>
     <string name="title_dashboard">Dashboard</string>
-    <string name="title_notifications">Notifications</string>
+    <string name="title_notifications">Profile</string>
     <string name="background">background</string>
     <string name="memo">memo</string>
     <string name="logo">logo</string>
-    <string name="sign_in">Sign In</string>
+    <string name="sign_in">Sign Up</string>
     <string name="login">login</string>
     <string name="welcome_back">Welcome Back</string>
     <string name="email">Email</string>

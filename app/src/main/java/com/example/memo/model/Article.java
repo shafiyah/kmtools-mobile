@@ -2,20 +2,43 @@ package com.example.memo.model;
 
 import androidx.constraintlayout.widget.Constraints;
 
-public class BaseArticle {
+import com.google.gson.annotations.SerializedName;
 
+public class Article {
+    @SerializedName("id")
     private int id;
-    private String data;
-    private String contetnt;
+    @SerializedName("title")
+    private String title;
+    @SerializedName("contend")
+    private String content;
+    @SerializedName("last_edited")
     private String lastEdited;
-    private String published_date;
+    @SerializedName("published_date")
+    private String publishedDate;
+    @SerializedName("id_user")
     private int idUser;
+    @SerializedName("id_interest_category")
     private int idInterestCategory;
+    @SerializedName("id_error_report")
     private int idErrorReport;
+    @SerializedName("created_at")
     private String createdAt;
+    @SerializedName("updated_at")
     private String updateAt;
+    @SerializedName("foto")
+    private String foto;
 
-    public BaseArticle() {
+
+
+    public Article() {
+    }
+
+    public String getFoto() {
+        return foto;
+    }
+
+    public void setTitle(String title) {
+        this.title = title;
     }
     public int getId() {
         return id;
@@ -25,20 +48,20 @@ public class BaseArticle {
         this.id = id;
     }
 
-    public String getData() {
-        return data;
+    public String getTitle() {
+        return  title;
     }
 
     public void setData(String data) {
-        this.data = data;
+        this.title = title;
     }
 
-    public String getContetnt() {
-        return contetnt;
+    public String getContent() {
+        return content;
     }
 
-    public void setContetnt(String contetnt) {
-        this.contetnt = contetnt;
+    public void setContent(String content) {
+        this.content = content;
     }
 
     public String getLastEdited() {
@@ -49,12 +72,12 @@ public class BaseArticle {
         this.lastEdited = lastEdited;
     }
 
-    public String getPublished_date() {
-        return published_date;
+    public String getPublishedDate() {
+        return publishedDate;
     }
 
-    public void setPublished_date(String published_date) {
-        this.published_date = published_date;
+    public void setPublishedDate(String publishedDate) {
+        this.publishedDate = publishedDate;
     }
 
     public int getIdUser() {

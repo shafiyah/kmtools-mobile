@@ -1,21 +1,33 @@
 package com.example.memo.model;
 
-public class BaseRegister <T>{
+import com.google.gson.annotations.SerializedName;
+
+public class User{
+
+    @SerializedName("name")
     private String name;
+    @SerializedName("username")
     private String username;
+    @SerializedName("email")
     private String email;
+    @SerializedName("password")
     private String password;
+    @SerializedName("update_at")
     private String updateAt;
-    private String createAd;
+    @SerializedName("created_at")
+    private String createAt;
+    @SerializedName("id")
     private String id;
 
-    public BaseRegister(String name, String username, String email, String password, String updateAt, String createAd, String id) {
+
+
+    public User(String name, String username, String email, String password, String updateAt, String createAd, String id) {
         this.name = name;
         this.username = username;
         this.email = email;
         this.password = password;
         this.updateAt = updateAt;
-        this.createAd = createAd;
+        this.createAt = createAd;
         this.id = id;
     }
 
@@ -28,11 +40,11 @@ public class BaseRegister <T>{
     }
 
     public String getCreateAd() {
-        return createAd;
+        return createAt;
     }
 
     public void setCreateAd(String createAd) {
-        this.createAd = createAd;
+        this.createAt = createAd;
     }
 
     public String getId() {

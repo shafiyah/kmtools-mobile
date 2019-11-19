@@ -28,19 +28,20 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
+        //IApiEndPoint apiEndPoint = ApiRetrofit.getInstance().create(IApiEndPoint.class);
+        //apiEndPoint.login("bitter@nut.co.nk", "12345").enqueue(new Callback<ResponseLogin>() {
+          //  @Override
+          //  public void onResponse(Call<ResponseLogin> call, Response<ResponseLogin> response) {
+              //  token = response.body().getToken();
+           // }
 
-        IApiEndPoint apiEndPoint = ApiRetrofit.getInstance().create(IApiEndPoint.class);
-        apiEndPoint.login("bitter@nut.co.nk", "12345").enqueue(new Callback<ResponseLogin>() {
-            @Override
-            public void onResponse(Call<ResponseLogin> call, Response<ResponseLogin> response) {
-                token = response.body().getToken();
-            }
+           // @Override
+           // public void onFailure(Call<ResponseLogin> call, Throwable t) {
 
-            @Override
-            public void onFailure(Call<ResponseLogin> call, Throwable t) {
+         //   }
+       // });
 
-            }
-        });
+
         BottomNavigationView navView = findViewById(R.id.nav_view);
 
        // Passing each menu ID as a set of Ids because each

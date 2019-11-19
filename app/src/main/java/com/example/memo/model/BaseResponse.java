@@ -2,7 +2,7 @@ package com.example.memo.model;
 
 import com.google.gson.annotations.SerializedName;
 
-public class ResponseSignIn<T> {
+public class BaseResponse<T> {
 
     @SerializedName("message")
     private  String message;
