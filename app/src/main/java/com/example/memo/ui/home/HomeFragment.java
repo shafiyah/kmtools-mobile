@@ -16,6 +16,8 @@ import com.example.memo.data.Api.IApiEndPoint;
 import com.example.memo.model.Article;
 import com.example.memo.model.ArticleBasedonCategory;
 import com.example.memo.model.BaseResponse;
+import com.example.memo.model.Categories;
+import com.example.memo.model.UserInterestCategory;
 
 import java.util.List;
 
@@ -30,19 +32,22 @@ public class HomeFragment extends Fragment {
     private ArticleAdapter recommendetAdapter;
     private ArticleAdapter latestAdapter;
 
+
     public View onCreateView(@NonNull LayoutInflater inflater,
                              ViewGroup container, Bundle savedInstanceState) {
 
-        View root = inflater.inflate(R.layout.fragment_home, container, false);
+        final View root = inflater.inflate(R.layout.fragment_home, container, false);
 
         rvRecommended = root.findViewById(R.id.recycleViewRecommonded);
         rvLatest = root.findViewById(R.id.recycleViewLatestArticle);
 
-        IApiEndPoint apiEndPoint = ApiRetrofit.getInstance().create(IApiEndPoint.class);
-
-//        apiEndPoint.getArticleBasedonCategory("frfrgrgg", 1).enqueue(new Callback<ArticleBasedonCategory<List<Article>>>() {
+//        IApiEndPoint apiEndPoint = ApiRetrofit.getInstance().create(IApiEndPoint.class);
+//        apiEndPoint.getArticleBasedonCategory("fjgpjhpjhposjhpotk  ").enqueue(new Callback<ArticleBasedonCategory<List<Article>>>() {
 //            @Override
 //            public void onResponse(Call<ArticleBasedonCategory<List<Article>>> call, Response<ArticleBasedonCategory<List<Article>>> response) {
+//                recommendetAdapter=new ArticleAdapter(response.body().getData());
+//                rvRecommended.setAdapter(recommendetAdapter);
+//                rvRecommended.setLayoutManager(new LinearLayoutManager(getContext()));
 //
 //            }
 //
@@ -51,6 +56,7 @@ public class HomeFragment extends Fragment {
 //
 //            }
 //        });
+//
 //        apiEndPoint.getListAllArticle("llokoono").enqueue(new Callback<BaseResponse<List<Article>>>() {
 //            @Override
 //            public void onResponse(Call<BaseResponse<List<Article>>> call, Response<BaseResponse<List<Article>>> response) {

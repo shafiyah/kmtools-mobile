@@ -6,9 +6,10 @@ import com.example.memo.model.Categories;
 import com.example.memo.model.ResponseLogOut;
 import com.example.memo.model.ResponseLogin;
 import com.example.memo.model.BaseResponse;
-import com.example.memo.model.SetInterestCategory;
+import com.example.memo.model.SettingInterestCategory;
 import com.example.memo.model.User;
 import com.example.memo.model.ResponseUpdateUser;
+import com.example.memo.model.UserInterestCategory;
 
 import java.util.List;
 
@@ -30,6 +31,7 @@ public interface  IApiEndPoint {
        @Field("password") String passwordUser
     );
 
+    @FormUrlEncoded
     @POST("register")
     Call<BaseResponse<User>>signUp(
             @Field("name")String name,
@@ -57,14 +59,18 @@ public interface  IApiEndPoint {
             @Header("Authorization") String token
     );
 
-    @GET("articlearticle/category/{id}")
+    @GET("article/recommendation")
     Call<ArticleBasedonCategory<List<Article>>>getArticleBasedonCategory(
-            @Header("Authorization") String token,
-            @Path("id") int idArticle
+            @Header("Authorization") String token
+    );
+
+    @GET("auth/user/get-category")
+    Call<UserInterestCategory<Categories>> getInterest(
+            @Header("Authorization") String token
     );
 
     @POST("auth/user/category")
-    Call<SetInterestCategory<Categories>> setInterest(
+    Call<SettingInterestCategory<Categories>> setInterest(
             @Field("message") String message,
             @Field("id_interest_category") int idInterest
     );

@@ -2,9 +2,11 @@ package com.example.memo.ui;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -27,7 +29,8 @@ public class SignUpActivity extends AppCompatActivity {
     TextInputEditText inputName;
     TextInputEditText inputPassword;
     TextInputEditText inputUsername;
-
+    String message;
+    User user;
 
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -37,25 +40,31 @@ public class SignUpActivity extends AppCompatActivity {
         inputName=(TextInputEditText)findViewById(R.id.editTextName);
         inputPassword=(TextInputEditText)findViewById(R.id.editTextPassword);
         inputUsername=(TextInputEditText)findViewById(R.id.editTextUsername);
-//        IApiEndPoint apiEndPoint = ApiRetrofit.getInstance().create(IApiEndPoint.class);
-//        apiEndPoint.signUp("ccc", "cccc", "ccccccc", "cccc").enqueue(new Callback<BaseResponse<User>>() {
-//            @Override
-//            public void onResponse(Call<BaseResponse<User>> call, Response<BaseResponse<User>> response) {
-
-//            }
-
-//            @Override
-//            public void onFailure(Call<BaseResponse<User>> call, Throwable t) {
-
-//            }
-//        });
 
         signUp.setOnClickListener(new View.OnClickListener() {
-            public void onClick(View v) {
-                Intent intent = new Intent(SignUpActivity.this, MainActivity.class);
-                startActivity(intent);
-            }
-        });
-    }
+                public void onClick(View v) {
 
-}
+                    IApiEndPoint apiEndPoint = ApiRetrofit.getInstance().create(IApiEndPoint.class);
+                    apiEndPoint.signUp(inputName.getText().toString(), inputUsername.getText().toString(),inputEmail.getText().toString(), inputPassword.getText().toString()).enqueue(new Callback<BaseResponse<User>>() {
+                        @Override
+                        public void onResponse(Call<BaseResponse<User>> call, Response<BaseResponse<User>> response) {
+                           message=response.message();
+                           Log.e("lele", call.request().toString());
+                           Log.e("lala", response.body().toString());
+                            user=response.body().getData();
+                            Toast.makeText(getApplicationContext(), message, Toast.LENGTH_LONG).show();
+                            Intent intent = new Intent(SignUpActivity.this, MainActivity.class);
+                            startActivity(intent);
+                        }
+
+                        @Override
+                        public void onFailure(Call<BaseResponse<User>> call, Throwable t) {
+                            Toast.makeText(getApplicationContext(), "gagal", Toast.LENGTH_LONG).show();
+                        }
+
+                    });
+
+                }
+            });
+        }
+    }
