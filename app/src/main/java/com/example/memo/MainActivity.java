@@ -3,6 +3,9 @@ package com.example.memo;
 import android.os.Bundle;
 import android.widget.Button;
 
+import com.example.memo.data.Api.ApiRetrofit;
+import com.example.memo.data.Api.IApiEndPoint;
+import com.example.memo.model.ResponseLogin;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 
 import androidx.appcompat.app.AppCompatActivity;
@@ -11,14 +14,36 @@ import androidx.navigation.Navigation;
 import androidx.navigation.ui.AppBarConfiguration;
 import androidx.navigation.ui.NavigationUI;
 
+import retrofit2.Call;
+import retrofit2.Callback;
+import retrofit2.Response;
+import retrofit2.http.HEAD;
+
 public class MainActivity extends AppCompatActivity {
+
+    private String token;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        Button btnpindah =findViewById(R.id.)
+
+        //IApiEndPoint apiEndPoint = ApiRetrofit.getInstance().create(IApiEndPoint.class);
+        //apiEndPoint.login("bitter@nut.co.nk", "12345").enqueue(new Callback<ResponseLogin>() {
+          //  @Override
+          //  public void onResponse(Call<ResponseLogin> call, Response<ResponseLogin> response) {
+              //  token = response.body().getToken();
+           // }
+
+           // @Override
+           // public void onFailure(Call<ResponseLogin> call, Throwable t) {
+
+         //   }
+       // });
+
+
         BottomNavigationView navView = findViewById(R.id.nav_view);
+
        // Passing each menu ID as a set of Ids because each
         //menu should be considered as top level destinations.
         AppBarConfiguration appBarConfiguration = new AppBarConfiguration.Builder(
